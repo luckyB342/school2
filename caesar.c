@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     {
         if (isupper(p[i]))
         {
-            printf("%c\n", (((p[i] - 65) + k) % 26) + 65);
+            printf("%c", (((p[i] - 65) + k) % 26) + 65);
         }
         else if (islower(p[i]))
         {
@@ -34,7 +34,7 @@ int main(int argc, string argv[])
         }
         else
         {
-            printf("%c\n", p[i]);
+            printf("%c", p[i]);
         }
     }
     //printf("\n");
