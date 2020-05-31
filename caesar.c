@@ -26,18 +26,18 @@ int main(int argc, string argv[])
     {
         if (isupper(p[i]))
         {
-            printf("%c", (((p[i] - 65) + k) % 26) + 65);
+            printf("%c\n", (((p[i] - 65) + k) % 26) + 65);
         }
         else if (islower(p[i]))
         {
-            printf("%c", (((p[i] - 97) + k) % 26) + 97);
+            printf("%c\n", (((p[i] - 97) + k) % 26) + 97);
         }
         else
         {
-            printf("%c", p[i]);
+            printf("%c\n", p[i]);
         }
     }
-    printf("\n");
+    //printf("\n");
     return 0;
 
 }
