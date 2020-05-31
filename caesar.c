@@ -30,7 +30,7 @@ int main(int argc, string argv[])
         }
         else if (islower(p[i]))
         {
-            printf("%c\n", (((p[i] - 97) + k) % 26) + 97);
+            printf("%c", (((p[i] - 97) + k) % 26) + 97);
         }
         else
         {
