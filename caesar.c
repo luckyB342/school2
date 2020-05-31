@@ -19,22 +19,22 @@ int main(int argc, string argv[])
     // get and...
     string p = get_string("plaintext: ");
 
-    printf("ciphertext: ");
+    //printf("ciphertext: ");
 
     // Convert plaintext to ciphertext...
     for (int i = 0, n = strlen(p); i <= n; i++)
     {
         if (isupper(p[i]))
         {
-            printf("%c", (((p[i] - 65) + k) % 26) + 65);
+            printf("ciphertext: %c", (((p[i] - 65) + k) % 26) + 65);
         }
         else if (islower(p[i]))
         {
-            printf("%c", (((p[i] - 97) + k) % 26) + 97);
+            printf("ciphertext: %c", (((p[i] - 97) + k) % 26) + 97);
         }
         else
         {
-            printf("%c", p[i]);
+            printf("ciphertext: %c", p[i]);
         }
     }
     printf("\n");
