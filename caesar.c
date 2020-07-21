@@ -13,6 +13,18 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    // Checks for non integer input from the user as key
+    for (int i = 0, s = strlen(argv[1]); i < s; ++i)
+    {
+         // Check for non int
+        if (!isdigit(argv[1][i]))
+        {
+            /* print usage error and return 1 */
+            printf("Only non-negative integer is allowed as a commandline argument\n");
+            return 1;
+        }
+    }
+
     // convert the argument given...
     int k = atoi(argv[1]);
 
