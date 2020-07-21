@@ -34,7 +34,7 @@ int main(int argc, string argv[])
     printf("ciphertext: ");
 
     // Convert plaintext to ciphertext...
-    for (int i = 0, n = strlen(p); i <= n; i++)
+    for (int i = 0, n = strlen(p); i < n; i++)
     {
         if (isupper(p[i]))
         {
