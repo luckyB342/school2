@@ -118,17 +118,17 @@ void print_winner(void)
         if (votes[i] == votes[i-1] && votes[i] != votes[i-2])
         {
             //printf("Candidates %s and %s are tied! \n", winner[i], winner[i-1]);
-            printf("%s \n", winner[i]);
-            printf("%s \n", winner[i-1]);
+            printf("%s\n", winner[i]);
+            printf("%s\n", winner[i-1]);
             break;
         }
 
         else if (votes[i] == votes[i-2])
         {
             //printf("Candidates %s and %s and %s are tied! \n", winner[i], winner[i-1], winner[i-2]);
-            printf("%s \n", winner[i]);
-            printf("%s \n", winner[i-1]);
-            printf("%s \n", winner[i-2]);
+            printf("%s\n", winner[i]);
+            printf("%s\n", winner[i-1]);
+            printf("%s\n", winner[i-2]);
             break;
         }
         else
