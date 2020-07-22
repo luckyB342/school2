@@ -180,6 +180,11 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
+    // Define the variable with the min votes number
+    int min = candidates[0].votes;
+    //printf("%i\n", min);
+    return min;
+    //return 0;
     int smallest = voter_count / 2;
     for (int i = 0; i < candidate_count; i++)
     {
