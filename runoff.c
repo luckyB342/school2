@@ -126,18 +126,18 @@ int main(int argc, string argv[])
 }
 
 // Record preference if vote is valid
-// bool vote(int voter, int rank, string name)
-// {
-//     for (int x = 0; x < candidate_count; x++)
-//     {
-//         if (strcmp(candidates[x].name, name) == 0)
-//         {
-//             preferences[voter][rank] = x;
-//             return true;
-//         }
-//     }
-//     return false;
-// }
+bool vote(int voter, int rank, string name)
+{
+    for (int x = 0; x < candidate_count; x++)
+    {
+        if (strcmp(candidates[x].name, name) == 0)
+        {
+            preferences[voter][rank] = x;
+            return true;
+        }
+    }
+    return false;
+}
 
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
@@ -164,72 +164,72 @@ void tabulate(void)
 }
 
 // Print the winner of the election, if there is one
-// bool print_winner(void)
-// {
-//     for (int i = 0; i < candidate_count; i++)
-//     {
-//         if (candidates[i].votes > voter_count / 2)
-//         {
-//             printf("%s\n", candidates[i].name);
-//             return true;
-//         }
-//     }
-//     return false;
-// }
+bool print_winner(void)
+{
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes > voter_count / 2)
+        {
+            printf("%s\n", candidates[i].name);
+            return true;
+        }
+    }
+    return false;
+}
 
 // Return the minimum number of votes any remaining candidate has
-// int find_min(void)
-// {
-//     int smallest = voter_count / 2;
-//     for (int i = 0; i < candidate_count; i++)
-//     {
-//         if (candidates[i].eliminated == false)
-//         {
-//             if (candidates[i].votes < smallest)
-//             {
-//                 smallest = candidates[i].votes;
-//             }
-//         }
+int find_min(void)
+{
+    int smallest = voter_count / 2;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].eliminated == false)
+        {
+            if (candidates[i].votes < smallest)
+            {
+                smallest = candidates[i].votes;
+            }
+        }
 
-//         if (candidates[i].eliminated == true)
-//         {
-//             return 1;
-//         }
-//     }
-//     return smallest;
-// }
+        if (candidates[i].eliminated == true)
+        {
+            return 1;
+        }
+    }
+    return smallest;
+}
 
 // Return true if the election is tied between all candidates, false otherwise
-// bool is_tie(int min)
-// {
-//     for (int i = 0; i < candidate_count; i++)
-//     {
+bool is_tie(int min)
+{
+    for (int i = 0; i < candidate_count; i++)
+    {
 
-//         while (candidates[i].votes == min)
-//         {
-//             if (candidates[i].eliminated == false)
-//             {
-//                 return true;
-//             }
+        while (candidates[i].votes == min)
+        {
+            if (candidates[i].eliminated == false)
+            {
+                return true;
+            }
 
-//             if (candidates[i].eliminated == true)
-//             {
-//                 return false;
-//             }
-//         }
-//     }
-//     return false;
-// }
+            if (candidates[i].eliminated == true)
+            {
+                return false;
+            }
+        }
+    }
+    return false;
+}
 
 // Eliminate the candidate (or candidiates) in last place
-// void eliminate(int min)
-// {
-//     for (int i = 0; i < candidate_count; i++)
-//     {
-//         if (candidates[i].votes == min)
-//         {
-//             candidates[i].eliminated = true;
-//         }
-//     }
-//     return;
-// }
+void eliminate(int min)
+{
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == min)
+        {
+            candidates[i].eliminated = true;
+        }
+    }
+    return;
+}
