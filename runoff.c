@@ -212,12 +212,16 @@ bool is_tie(int min)
                 return true;
             }
 
-            if (candidates[i].eliminated == true)
+            else if (candidates[i].eliminated == true)
+            {
+                return false;
+            }
+            else
             {
                 return false;
             }
         }
-        return false;
+        
     }
     return false;
 }
