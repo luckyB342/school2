@@ -217,6 +217,7 @@ bool is_tie(int min)
                 return false;
             }
         }
+        return false;
     }
     return false;
 }
