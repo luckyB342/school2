@@ -6,34 +6,31 @@
 
 int main(int argc, string argv[])
 {
-    // check exactly two
+    // check exactly two commandline arguments
     while (argc != 2)
     {
         printf("Only non-negative integer is allowed as a commandline argument\n");
         return 1;
     }
 
-    // Checks for non integer input from the user as key
+    // Check for non-integer input from the user as key
     for (int i = 0, s = strlen(argv[1]); i < s; ++i)
     {
-         // Check for non int
         if (!isdigit(argv[1][i]))
         {
-            /* print usage error and return 1 */
             printf("Only non-negative integer is allowed as a commandline argument\n");
             return 1;
         }
     }
 
-    // convert the argument given...
+    // convert the argument given from string to an integer
     int k = atoi(argv[1]);
 
-    // get and...
+    // get text to be encreypted from user
     string p = get_string("plaintext: ");
-
     printf("ciphertext: ");
 
-    // Convert plaintext to ciphertext...
+    // Convert plaintext to ciphertext usin the user's key
     for (int i = 0, n = strlen(p); i < n; i++)
     {
         if (isupper(p[i]))
@@ -51,5 +48,4 @@ int main(int argc, string argv[])
     }
     printf("\n");
     return 0;
-
 }
