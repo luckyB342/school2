@@ -66,7 +66,6 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    // TODO
     for (int i = 0 ; i < candidate_count ; i++)
 
         if (strcmp(name, candidates[i].name) == 0)
@@ -80,7 +79,6 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    // TODO
     int votes[candidate_count];
     char winner[candidate_count][50];
 
@@ -88,7 +86,7 @@ void print_winner(void)
     for (int i = 0; i < candidate_count; i++)
     {
         votes[i] = candidates[i].votes;
-        strcpy(winner[i],candidates[i].name);
+        strcpy(winner[i], candidates[i].name);
     }
 
     // Bubble sort array
@@ -106,29 +104,27 @@ void print_winner(void)
                 // Sort candidate name to match sorted vote count
                 char temp2[50];
                 strcpy(temp2, winner[inner]);
-                strcpy(winner[inner],winner[outer]);
+                strcpy(winner[inner], winner[outer]);
                 strcpy(winner[outer], temp2);
             }
         }
     }
 
     // Determine if there are any ties.
-    for (int i = candidate_count-1; i >= 0; i--)
+    for (int i = candidate_count - 1; i >= 0; i--)
     {
-        if (votes[i] == votes[i-1] && votes[i] != votes[i-2])
+        if (votes[i] == votes[i - 1] && votes[i] != votes[i - 2])
         {
-            //printf("Candidates %s and %s are tied! \n", winner[i], winner[i-1]);
             printf("%s\n", winner[i]);
-            printf("%s\n", winner[i-1]);
+            printf("%s\n", winner[i - 1]);
             break;
         }
 
-        else if (votes[i] == votes[i-2])
+        else if (votes[i] == votes[i - 2])
         {
-            //printf("Candidates %s and %s and %s are tied! \n", winner[i], winner[i-1], winner[i-2]);
             printf("%s\n", winner[i]);
-            printf("%s\n", winner[i-1]);
-            printf("%s\n", winner[i-2]);
+            printf("%s\n", winner[i - 1]);
+            printf("%s\n", winner[i - 2]);
             break;
         }
         else
