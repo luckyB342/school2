@@ -77,11 +77,11 @@ int main(int argc, char *argv[])
         }
 
         //to continue writing if there was a JPEG found before previously
-        else if (counter > 0 && buffer[0] != 0xff )
-        {
-            //continue writing to this new jpeg
-            fwrite(buffer, sizeof(buffer), 1, img);
-        }
+        // else if (counter > 0 && buffer[0] != 0xff )
+        // {
+        //     //continue writing to this new jpeg
+        //     fwrite(buffer, sizeof(buffer), 1, img);
+        // }
 
 
 
