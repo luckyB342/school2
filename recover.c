@@ -17,15 +17,15 @@ int main(int argc, char *argv[])
 
 
     //check that if user did not give any inputs, to return
-    if(argc !=2)
+    if (argc != 2)
     {
         printf("Usage: ./recover image \n");
         return 1;
     }
 
     //open up file and read the file
-    FILE *file = fopen(card,"r");
-    if(!file)
+    FILE *file = fopen(card, "r");
+    if (!file)
     {
         printf("Could not open card\n");
         return 1;
@@ -38,10 +38,10 @@ int main(int argc, char *argv[])
     while (fread(buffer, sizeof(buffer), 1, file) == 1)
     {
         //if first 4 bytes of the array are as per the below
-        if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             //if this is the 1st JPEG that someone is working on
-            if(counter == 0)
+            if (counter == 0)
             {
                 //create a new jpeg file
                 sprintf(filename, "%03i.jpg", counter);
