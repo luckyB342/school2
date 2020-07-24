@@ -70,10 +70,7 @@ int main(int argc, char *argv[])
 
                 //start writing to this new jpeg, need a number that is based on how many times before the next "start" of the jpeg file
                 fwrite(buffer, sizeof(buffer), 1, img);
-
             }
-
-
         }
 
         //to continue writing if there was a JPEG found before previously
@@ -82,14 +79,9 @@ int main(int argc, char *argv[])
             //continue writing to this new jpeg
             fwrite(buffer, sizeof(buffer), 1, img);
         }
-
-
-
     }
 
     //close files
     fclose(img);
     fclose(file);
-
-
 }
