@@ -2,8 +2,8 @@ from sys import argv, exit
 import csv
 
 while len(argv) != 3:
-        print("Usage error!")
-        exit(1)
+    print("Usage error!")
+    exit(1)
 # Open text file and load into memory
 sequence_file = open(str(argv[2]), 'r')
 read_txt = sequence_file.read()
