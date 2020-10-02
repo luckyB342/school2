@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}Admin Register Multiple Students{% endblock %}
+
+{% block body %}
+
+	<section class="feature_area section_gap_top">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-5">
+					<div class="main_title">
+						<h2 class="mb-3"> Register Students</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-5">
+					<div class="main_title">
+						<form action="/admin_import_students" method="post">
+							<div>
+								<p> Attach csv file</p>
+							</div>
+							<br>
+							<br>
+							<div class="form-select form-group">
+					    		<select class="form-control" name="class">
+						    			<option value="class" selected="class" class="">Select Class</option>
+						    			<option value="js1" class="">JS1</option>
+						    			<option value="js2" class="">JS2</option>
+						    			<option value="js3" class="">JS3</option>
+						    			<option value="ss1" class="">SS1</option>
+						    			<option value="ss2" class="">SS2</option>
+						    			<option value="ss3" class="">SS3</option>
+						    			<!-- {% for cls in range(0, ) %}
+						    				<option value="{{ class[cls] }}" class="option">{{ class[cls] }}</option>
+						    			{%endfor%} -->
+						    			
+					    		</select>
+					    	</div>
+							<br>
+							<br>
+					    	<div class="">
+					    		<input type="file" name="csv_file">
+					    	</div>
+				    		<br>
+				    		<br>
+        					<div class="">
+	                      		<button type="submit" class="primary-btn2  info-border generic-btn success-border circle-arrow btton-group-area mt-10">Upload csv
+	                        		<span class="ti-arrow-right">
+	                          
+	                        		</span>
+	                      		</button>
+		                  	</div>
+    					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

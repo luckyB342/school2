@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}Admin register admin{% endblock %}
+
+{% block body %}
+
+	<section class="feature_area section_gap_top">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-5">
+					<div class="main_title">
+						<h2 class="mb-3"> Register an Admin</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-5">
+					<div class="main_title">
+						<form action="/admin_register_admin" method="post">
+        					<div class="form-group">
+            					<input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        					</div>
+        					<div class="form-group">
+            					<input class="form-control" name="password" placeholder="Password" type="password">
+        					</div>
+        					<div class="">
+	                      		<button type="submit" class="primary-btn2  info-border generic-btn success-border circle-arrow btton-group-area mt-10">Register
+	                        		<span class="ti-arrow-right">
+	                          
+	                        		</span>
+	                      		</button>
+		                  	</div>
+    					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

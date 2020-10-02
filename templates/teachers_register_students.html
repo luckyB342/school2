@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block title %}Teacher register students{% endblock %}
+
+{% block body %}
+
+	<section class="feature_area section_gap_top">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-5">
+					<div class="main_title">
+						<h2 class="mb-3"> Register Students</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-5">
+					<div class="main_title">
+						<form action="/teachers_register_students" method="post">
+        					<div class="form-group">
+            					<input autocomplete="off" autofocus class="form-control" name="name" placeholder="Full Name" type="text">
+        					</div>
+        					<div class="form-select form-group">
+					    		<select class="form-control" name="tgender">
+						    			<option value="gender" selected="gender" class="">Gender</option>
+						    			<option value="f" class="option">Female</option>
+						    			<option value="m" class="option">Male</option>
+					    		</select>
+					    	</div>
+					    	<div class="form-select form-group">
+					    		<select class="form-control" name="year">
+						    			<option value="year" selected="year" class="">Year/Session</option>
+						    			<option value="2016" class="option">2016</option>
+						    			<option value="2017" class="option">2017</option>
+						    			<option value="2018" class="option">2018</option>
+						    			<option value="2019" class="option">2019</option>
+						    			<option value="2020" class="option">2020</option>
+					    		</select>
+					    	</div>
+					    	<div class="form-group">
+					    		<input type="date" name="dob" class="form-control" max="2020-01-01">
+					    	</div>
+					    	<div class="form-check-inline">
+					    		<div class="form-check">
+				    				<input type="checkbox" value="js1" class="form-check-input" name="js1">JS1</input>
+				    			</div>
+				    			<div class="form-check">
+				    				<input type="checkbox" value="js2" class="form-check-input" name="js2">JS2</input>
+				    			</div>
+				    			<div class="form-check">
+				    				<input type="checkbox" value="js3" class="form-check-input" name="js3">JS3</input>
+				    			</div>
+					    	</div>
+					    	<br>
+					    	<br>
+				    		<div class="form-check-inline">
+				    			<div class="form-check">
+					    			<input type="checkbox" value="ss1" class="form-check-input" name="ss1">SS1</input>
+					    		</div>
+					    		<div class="form-check">
+					    			<input type="checkbox" value="ss2" class="form-check-input" name="ss2">SS2</input>
+					    		</div>
+					    		<div class="form-check">
+					    			<input type="checkbox" value="ss3" class="form-check-input" name="ss3">SS3</input>
+						    	</div>
+				    		</div>
+				    		<br>
+				    		<br>
+        					<div class="">
+	                      		<button type="submit" class="primary-btn2  info-border generic-btn success-border circle-arrow btton-group-area mt-10">Register
+	                        		<span class="ti-arrow-right">
+	                          
+	                        		</span>
+	                      		</button>
+		                  	</div>
+		                  	<br>
+		                  	<br>
+		                  	<div class="">
+		                  		<p>____ or ____</p>
+		                  	</div>
+		                  	<br>
+		                  	<br>
+		                  	<div class="">
+		                  		<p>Click <a href="/teachers_import_students">here</a> to <strong>import students</strong> details as a csv file</p>
+		                  	</div>
+    					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

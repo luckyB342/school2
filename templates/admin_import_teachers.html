@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}Admin Register Multiple Teachers{% endblock %}
+
+{% block body %}
+
+	<section class="feature_area section_gap_top">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-5">
+					<div class="main_title">
+						<h2 class="mb-3"> Register Teacher</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-5">
+					<div class="main_title">
+						<form action="/admin_import_teachers" method="post">
+							<div>
+								<p> Attach csv file</p>
+							</div>
+							<br>
+							<br>
+					    	<div class="">
+					    		<input type="file" name="csv_file">
+					    	</div>
+				    		<br>
+				    		<br>
+        					<div class="">
+	                      		<button type="submit" class="primary-btn2  info-border generic-btn success-border circle-arrow btton-group-area mt-10">Upload csv
+	                        		<span class="ti-arrow-right">
+	                          
+	                        		</span>
+	                      		</button>
+		                  	</div>
+    					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

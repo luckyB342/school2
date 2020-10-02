@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}Admin students{% endblock %}
+
+{% block body %}
+
+	<section class="feature_area section_gap_top">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-5">
+					<div class="main_title">
+						<h2 class="mb-3"> Registered Students</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-10">
+					<!-- <div class="main_title"> -->
+						<table class="table table-hover">
+							<tr>
+								<th class="mb-30 title_color">#</th>
+								<th class="mb-30 title_color">Name</th>
+								<th class="mb-30 title_color">Gender</th>
+								<th class="mb-30 title_color">Class</th>
+								<th class="mb-30 title_color">Year</th>
+								<th class="mb-30 title_color">DOB</th>
+							</tr>
+							<tbody>
+								{% for i in range(0, allname) %}
+									<tr>
+										<th>{{ i+1 }}</th>
+										<th> {{ names[i] }} </th>
+										<th>{{ gender[i] }}</th>
+										<th> {{ classs[i] }} </th>
+										<th> {{ year[i] }} </th>
+										<th> {{ dob[i] }} </th>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					<!-- </div> -->
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
